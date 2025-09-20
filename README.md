@@ -1,1 +1,5 @@
 # CEDeclara
+
+## Lizenz
+
+MIT
