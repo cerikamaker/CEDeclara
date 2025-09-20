@@ -1,5 +1,8 @@
 # Specification of CEDeclara
 
+CEDeclara should be developed as a PWA-Application.
+It should be as much as possible plattform independant.  
+
 ## Intention
 
 The intention is to provide a simple software to create a CE Declaration.

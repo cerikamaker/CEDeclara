@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/php/logo2.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="https://searchnorm.de/touch-icon-180.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="https://searchnorm.de/touch-icon-152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://searchnorm.de/touch-icon-180.png"/>
+    <link rel="apple-touch-icon" sizes="167x167" href="https://searchnorm.de/touch-icon-167.png"/>
+    <link rel="manifest" href="manifest.json">
+    <title>CE-Declara</title>
+</head>
+<body>
+    <h1>Konformitätserklärung</h1>
+    
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('service-worker.js')
+            .then(reg => console.log('Service Worker registriert:', reg.scope))
+            .catch(err => console.error('Service Worker Error:', err));
+        }
+        if ('showOpenFilePicker' in window) {
+            console.log("Passt");
+        }
+    </script>
+</body>
+</html>
