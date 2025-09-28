@@ -51,4 +51,33 @@ In this way we can use the datamodel also in other visualisations.
 
 ### Datamodel
 
+The data consists more or less of three main parts.
+
+- Directives
+- Persons
+- Products
+
+#### Directives
+
+Depending on the directive the form of the declaration can change.
+There is also the possibility to use one directive in different ways, what is also causing a different form of declaration.
+
+#### Persons
+
+In this case a person can be a natural person or a company.
+The most directives only need a manufacturer and a person that signs the declaration.
+But e.g. the machinde directive allows more persons to be included in the process.
+
+#### Products
+
+For the declaration it is important, that the product for that the conformity was declared can be identified.
+So there is a need to structure the own products, that they can be identified by the declaration.
+
 ### Visualisation
+
+The visualisation should be independent of the Datamodel, so that it can be written in any other language.
+In this project the visualisation must be realized in HTML/CSS and JavaScript.
+For interacting between the DataModel in Rust and the Visualisation in JS there is something like an interface needed.
+Because if there is no one the visualisation does not know how to manipulate the DataModel.
+In C# e.g. there is a technology called Databinding.
+Also for this project we need something similar.  

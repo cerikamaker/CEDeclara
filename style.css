@@ -1,0 +1,45 @@
+:root {
+    --backgroundcolor: #101010;
+    --textcolor: #f0f0f0;
+    --std-fonts: system-ui, 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    --dodger-blue: #1e90ff;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    font-family: var(--std-fonts);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Start: Menubar */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+div.divider {
+    height: 1px;
+    width: 100%;
+    background-color: var(--dodger-blue);
+}
+
+/* End Menubar*/
+
+main {
+    flex: 1 1 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
