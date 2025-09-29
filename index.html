@@ -10,19 +10,36 @@
     <link rel="apple-touch-icon" sizes="167x167" href="https://searchnorm.de/touch-icon-167.png"/>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <script src="./js/resizer.js" defer></script>
     <meta name="robots" content="noindex"/>
     <title>CE-Declara</title>
 </head>
 <body>
     <header>
+        <div id="banner">
+            C<span style="color: red;">E</span>-Declara
+        </div>
         <div class="divider"></div>
         <div id="menubar">
-            <p>Hallo</p>
+            <p>Menüleiste</p>
         </div>
         <div class="divider"></div>
     </header>
     <main id="main-container">
-        <p>Hallo2</p>
+        <aside id="sidebar">
+            <nav id="sidebar-menu">
+                <button>Seiten</button>
+            </nav>
+        </aside>
+        <section id="navigator">
+            <h1>Navigator</h1>
+            <p id="test">Test</p>
+            <p id="test2">Test</p>
+        </section>
+        <div id="resizer"></div>
+        <section id="app-area">
+            <h1>Konformitätserklärung</h1>
+        </section>
     </main>
     <footer id="statusbar">
         <p>hallo3</p>

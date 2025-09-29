@@ -1,5 +1,10 @@
 :root {
     --backgroundcolor: #101010;
+    --workground-color: #181818;
+    --radius: 8px;
+    --std-marging-right: 10px;
+    --std-margin-top: 20px;
+    --std-padding: 20px;
     --textcolor: #f0f0f0;
     --std-fonts: system-ui, 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     --dodger-blue: #1e90ff;
@@ -19,13 +24,15 @@ body {
     flex-direction: column;
 }
 
-
-
 /* Start: Menubar */
 
 header {
     display: flex;
     flex-direction: column;
+}
+
+#banner {
+    background-color: var(--backgroundcolor);
 }
 
 div.divider {
@@ -36,9 +43,47 @@ div.divider {
 
 /* End Menubar*/
 
+/* Start Main */
+
 main {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
 }
+
+aside {
+    margin-right: var(--std-marging-right);
+    margin-top: var(--std-margin-top);
+    padding: var(--std-padding);
+}
+
+#resizer {
+    background-color: var(--dodger-blue);
+    width: 2px;
+    margin-top: var(--std-margin-top);
+    margin-right: var(--std-marging-right);
+    cursor: e-resize;
+}
+
+#navigator {
+    background-color: var(--workground-color);
+    border-radius: var(--radius);
+    /*flex: 0 0 auto;*/
+    margin-right: var(--std-marging-right);
+    margin-top: var(--std-margin-top);
+    padding: var(--std-padding);
+}
+
+#app-area {
+    background-color: var(--workground-color);
+    border-radius: var(--radius);
+    flex: 1 1 auto;
+    margin-right: var(--std-marging-right);
+    margin-top: var(--std-margin-top);
+    padding: var(--std-padding);
+}
+
+/* End Main */
 
 footer {
     flex: 0 0 auto;
