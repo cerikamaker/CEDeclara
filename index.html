@@ -10,25 +10,28 @@
     <link rel="apple-touch-icon" sizes="167x167" href="https://searchnorm.de/touch-icon-167.png"/>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <script src="./js/resizer.js" defer></script>
+    <script type="module" src="./js/codebehind.js" defer></script>
     <meta name="robots" content="noindex"/>
     <title>CE-Declara</title>
 </head>
 <body>
     <header>
         <div id="banner">
-            C<span style="color: red;">E</span>-Declara
         </div>
         <div class="divider"></div>
         <div id="menubar">
-            <p>Menüleiste</p>
+            <nav id="menubar-nav">
+                <button class="menubar-btn">Datei</button>
+                <button class="menubar-btn">Info</button>
+            </nav>
         </div>
         <div class="divider"></div>
     </header>
     <main id="main-container">
         <aside id="sidebar">
             <nav id="sidebar-menu">
-                <button>Seiten</button>
+                <button class="sidebar-btn">Seitennavigator</button>
+                <button class="sidebar-btn">Stammdaten</button>
             </nav>
         </aside>
         <section id="navigator">
@@ -42,7 +45,7 @@
         </section>
     </main>
     <footer id="statusbar">
-        <p>hallo3</p>
+        Status:
     </footer> 
     <script>
         if('serviceWorker' in navigator){

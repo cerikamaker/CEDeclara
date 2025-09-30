@@ -35,6 +35,24 @@ header {
     background-color: var(--backgroundcolor);
 }
 
+#menubar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    height: 40px;
+    margin-left: 40px;
+}
+
+nav > .menubar-btn {
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    font-size: 1em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-style: solid;
+    border-width: 0px;
+}
+
 div.divider {
     height: 1px;
     width: 100%;
@@ -52,9 +70,29 @@ main {
 }
 
 aside {
-    margin-right: var(--std-marging-right);
-    margin-top: var(--std-margin-top);
-    padding: var(--std-padding);
+    margin-top: 40px;
+    margin-right: 0;
+}
+
+aside > nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    margin-right: 0px;
+}
+
+aside > nav .sidebar-btn {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 0.9em;
+    color: var(--textcolor);
+    background-color: var(--workground-color);
+    border-width: 0px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    margin-right: 0px;
 }
 
 #resizer {
@@ -63,6 +101,8 @@ aside {
     margin-top: var(--std-margin-top);
     margin-right: var(--std-marging-right);
     cursor: e-resize;
+    height: 95%;
+    align-self: center;
 }
 
 #navigator {
@@ -86,5 +126,6 @@ aside {
 /* End Main */
 
 footer {
+    padding-left: 40px;
     flex: 0 0 auto;
 }
