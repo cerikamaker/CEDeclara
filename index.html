@@ -11,6 +11,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./js/codebehind.js" defer></script>
+    <script type="module" src="./webcomponents/navigators/sitenavigator.js" defer></script>
     <meta name="robots" content="noindex"/>
     <title>CE-Declara</title>
 </head>
@@ -21,8 +22,8 @@
         <div class="divider"></div>
         <div id="menubar">
             <nav id="menubar-nav">
-                <button class="menubar-btn">Datei</button>
-                <button class="menubar-btn">Info</button>
+                <button id="file-btn" class="menubar-btn">Datei</button>
+                <button id="info-btn" class="menubar-btn">Info</button>
             </nav>
         </div>
         <div class="divider"></div>
@@ -35,13 +36,12 @@
             </nav>
         </aside>
         <section id="navigator">
-            <h1>Navigator</h1>
-            <p id="test">Test</p>
-            <p id="test2">Test</p>
+            <site-navigator id="site-navigator"></site-navigator>
         </section>
         <div id="resizer"></div>
         <section id="app-area">
             <h1>Konformitätserklärung</h1>
+            <p id="test">Test</p>
         </section>
     </main>
     <footer id="statusbar">
