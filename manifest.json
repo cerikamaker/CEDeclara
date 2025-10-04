@@ -18,5 +18,13 @@
         "type": "image/png"
         }
     ],
+    "screenshots": [
+        {
+            "src": "./installui-desktop.png",
+            "sizes": "1024x768",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ],
     "lang": "de"
 }

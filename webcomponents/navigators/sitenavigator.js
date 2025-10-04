@@ -2,7 +2,7 @@ class SiteNavigator extends HTMLElement {
     arrow = `
         <span>
             <svg width="16" height="16" viewBox="0 0 16 16">
-                <polyline points="3,4 10,8 3,12" fill="none" stroke="#1e90ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
+                <polyline points="6,4 12,8 6,12" fill="none" stroke="#1e90ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
             </svg>
         </span>
     `;
@@ -11,6 +11,7 @@ class SiteNavigator extends HTMLElement {
         <style>
             h1 {
                 margin: 0px;
+                font-size: var(--heading1-font-size);
             }
 
             nav {
@@ -20,17 +21,23 @@ class SiteNavigator extends HTMLElement {
 
             nav ul {
                 list-style: none;
-            }
-            
+                }
+                
             nav > ul {
                 padding-left: 0px;
                 margin-left: 0px;
+            }
+                    
+            li {
+                margin-bottom: 0.2em;
             }
 
             .tree-label {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                gap: 0.2em;
+                margin-bottom: 0.2em;
             }
             
             .tree-label svg {
@@ -39,6 +46,10 @@ class SiteNavigator extends HTMLElement {
 
             ul ul.collapsed {
                 display: none;
+            }
+
+            li.expanded > .tree-label svg {
+                transform: rotate(90deg);
             }
         </style>
     `;
@@ -64,6 +75,7 @@ class SiteNavigator extends HTMLElement {
                 const sublist = li.querySelector('ul');
                 if(sublist){
                     sublist.classList.toggle('collapsed');
+                    li.classList.toggle('expanded');
                 }
             });
         });
@@ -97,7 +109,7 @@ class SiteNavigator extends HTMLElement {
                             Organisation
                         </span>
                         <ul class="collapsed">
-                            <li>Datenquelle</li>
+                            <li data-view="Datenquelle">Datenquelle</li>
                         </ul>
                     </li>
                     <li>
@@ -106,18 +118,12 @@ class SiteNavigator extends HTMLElement {
                             Eingabemasken
                         </span>
                         <ul class="collapsed">
+                            <li>ReadMe</li>
+                            <li data-view="Produktidentifikation">Produktidentifikation</li>
                             <li>Harmonisierungsvorschriften</li>
-                            <li>Produktidentifikation</li>
-                            <li>
-                                <span class="tree-label">
-                                    ${this.arrow}
-                                    Fundstellen
-                                </span>
-                                <ul class="collapsed">
-                                    <li>Harmonisierte Normen</li>
-                                    <li>Sonstige Normen</li>
-                                </ul>
-                            </li>
+                            <li>Harmonisierte Normen</li>
+                            <li>Sonstige Normen</li>
+                            <li>Verantwortliche</li>
                         </ul>
                     </li>
                     <li>

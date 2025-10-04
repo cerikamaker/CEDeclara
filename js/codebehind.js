@@ -45,5 +45,6 @@ window.addEventListener('load', () => {
             set_element_for_fun();
         });
     });
+    
 });
 

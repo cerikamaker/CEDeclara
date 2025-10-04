@@ -1,0 +1,115 @@
+
+<style>
+    #productident-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: start;
+        gap: 3em 1em;
+        margin-top: 50px;
+        min-width: 0;
+    }
+
+    #product-general {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: 100%;
+    }
+    
+    #product-specific {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    
+    #product-selection-area {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        min-width: 0;
+    }
+    
+    .product-holder {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        row-gap: 1em;
+        column-gap: 0.4em;
+        flex: 1 1 auto;
+        min-width: 0;
+        align-content: flex-start;
+    }
+    
+    .product-holder input[type="text"] {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    #product-general-data,
+    #product-specific-data {
+        min-width: 0;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+</style>
+
+<h1>Produktidentifikation</h1>
+
+<section id="productident-area">
+    <div id="product-general">
+        <h2>Allgemeine Produktdaten:</h2>
+        <div id="product-general-data" class="product-holder inner-box-area">
+            <label>Bezeichnung: </label>
+            <span>
+                Das ist ein test für einen sehr langen Text nur um zu sehen, was mit dem Umbruch geschieht
+            </span>
+            <label>Model: </label>
+            <span></span>
+            <label>Typ: </label>
+            <span></span>
+            <label>Funktion: </label>
+            <span></span>
+            <label>Zusatz: </label>
+            <span>
+                Das ist ebenfalls ein langer Text um den Zeilenumbruch zu prüfen.
+                Wir machen den Text noch länger.
+                Wir erweitern den Abstand noch einmale um eine Zeile und sehen was passiert.
+                Das ist ebenfalls ein langer Text um den Zeilenumbruch zu prüfen.
+                Wir machen den Text noch länger.
+                Wir erweitern den Abstand noch einmale um eine Zeile und sehen was passiert.
+            </span>
+        </div>
+    </div>
+    <div id="product-specific">
+        <h2>Projektbezogene Angaben:</h2>
+        <div id="product-specific-data" class="product-holder inner-box-area">
+            <label>Projektnummer: </label>
+            <input type="text">
+            <label>Auftragsnummer: </label>
+            <input type="text">
+            <label>Seriennummer: </label>
+            <input type="text">
+            <label>Chargennummer: </label>
+            <input type="text">
+            <label>Baujahr: </label>
+            <input type="text">
+        </div>
+    </div>
+    <div id="product-selection-area">
+        <h2>Produktauswahl:</h2>
+        <div class="inner-box-area">
+            Test
+        </div>
+    </div>
+</section>

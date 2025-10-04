@@ -1,6 +1,7 @@
 :root {
     --backgroundcolor: #101010;
     --workground-color: #181818;
+    --inner-area-color: #22242a;
     --radius: 8px;
     --std-marging-right: 10px;
     --std-margin-top: 20px;
@@ -8,12 +9,15 @@
     --textcolor: #f0f0f0;
     --std-fonts: system-ui, 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     --dodger-blue: #1e90ff;
+    --heading1-font-size: 2em;
+    --heading2-font-size: 1.5em;
 }
 
 html, body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 body {
@@ -22,10 +26,16 @@ body {
     font-family: var(--std-fonts);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
     margin:0px;
+    font-size: var(--heading1-font-size);
+}
+
+h2 {
+    font-size: var(--heading2-font-size);
 }
 
 /* Start: Menubar */
@@ -71,6 +81,7 @@ main {
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
+    min-height: 0;
 }
 
 aside {
@@ -102,6 +113,7 @@ aside > nav .sidebar-btn {
 #resizer {
     background-color: var(--dodger-blue);
     width: 2px;
+    flex: 0 0 2px;
     margin-top: var(--std-margin-top);
     margin-right: var(--std-marging-right);
     cursor: e-resize;
@@ -112,19 +124,41 @@ aside > nav .sidebar-btn {
 #navigator {
     background-color: var(--workground-color);
     border-radius: var(--radius);
-    /*flex: 0 0 auto;*/
+    flex: 0 0 auto;
     margin-right: var(--std-marging-right);
     margin-top: var(--std-margin-top);
     padding: var(--std-padding);
+    min-width: 0;
 }
 
 #app-area {
     background-color: var(--workground-color);
     border-radius: var(--radius);
-    flex: 1 1 auto;
     margin-right: var(--std-marging-right);
     margin-top: var(--std-margin-top);
     padding: var(--std-padding);
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+}
+
+#app-area::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+#app-area::-webkit-scrollbar-thumb {
+    background: var(--dodger-blue);
+    border-radius: 2px;
+}
+
+#app-area::-webkit-scrollbar-thumb:hover {
+    background: var(--dodger-blue);
+}
+
+#app-area::-webkit-scrollbar-corner {
+    background: #222;
 }
 
 /* End Main */
@@ -132,4 +166,22 @@ aside > nav .sidebar-btn {
 footer {
     padding-left: 40px;
     flex: 0 0 auto;
+}
+
+
+/* General tag definitions*/
+input[type="text"] {
+    background-color: #101010;
+    border-width: 0;
+    color: var(--textcolor);
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/* Class deiniftions */
+.inner-box-area {
+    border-radius: 8px;
+    background-color: var(--inner-area-color);
+    padding: 30px;
 }
