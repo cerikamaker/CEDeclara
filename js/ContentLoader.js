@@ -1,4 +1,6 @@
 import { DatenquelleView } from "../html/datenquelle_view.js";
+import { ProductIdentView } from "../html/productident_view.js";
+import { Declara } from "./pkg/sn_viewmodel_cedeclara.js";
 /**
  * @description
  * This class is loading HTML-Modules to show them inside the app-area.
@@ -12,8 +14,14 @@ export class ContentLoader {
         Produktidentifikation: './html/productident.html'
     };
 
-    constructor() {
+    /**
+     * 
+     * @param {Declara} declara 
+     */
+    constructor(declara) {
+        this.declara = declara;
         this.datenquelle = new DatenquelleView();
+        this.productident = new ProductIdentView(this.declara);
     }
 
     /**
@@ -34,10 +42,19 @@ export class ContentLoader {
         this.setEventListeners(content);
     }
 
+    /**
+     * @description
+     * This function is loading the correct viewmodel depending on the selection in the sitenavigator
+     * @param {string} content
+     * Then content parameter comes from seitennaviagtor.js. 
+     */
     setEventListeners(content){
         switch(content){
             case 'Datenquelle':
                 this.datenquelle.InitView();
+                break;
+            case 'Produktidentifikation':
+                this.productident.InitView();
                 break;
             default:
         }

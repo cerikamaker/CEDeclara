@@ -185,3 +185,20 @@ input[type="text"] {
     background-color: var(--inner-area-color);
     padding: 30px;
 }
+
+
+button {
+    background-color: var(--dodger-blue);
+    color: var(--textcolor);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.1);
+}
+
+button:hover {
+    background-color: #339cff; /* etwas heller als dodger-blue */
+}

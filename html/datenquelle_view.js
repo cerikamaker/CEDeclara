@@ -1,6 +1,5 @@
 export class DatenquelleView {
     constructor() {
-
     }
 
     InitView(){
@@ -29,5 +28,11 @@ export class DatenquelleView {
                 }
             }
         }); 
+
+        ///ToDo: Das wieder löschen, war nur zum testen.
+        console.log("Constructed");
+        if(window.declara){
+            window.declara.get_viewmodel_productident();
+        }
     }
 }
