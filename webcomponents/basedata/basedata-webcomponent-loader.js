@@ -1,0 +1,1 @@
+import './item_product.js';

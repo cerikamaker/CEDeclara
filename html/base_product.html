@@ -1,0 +1,98 @@
+<style>
+    #item-product-container{
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        overflow-y: auto;
+    }
+
+    #btn-product-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #filter-container {
+        background-color: var(--inner-area-color);
+        padding: 20px;
+        border-radius: var(--radius);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: baseline;
+        gap: 1em;
+        margin-top: 10px;
+    }
+
+    #product-container {
+        flex: 1 1 auto;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    #div-product {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+
+</style>
+
+<h1>Produktdaten</h1>
+<div id="div-product">
+    <!--In this section the type is selectable and can be edited, added or deleted or renamed-->
+    <section>
+        <div id="filter-container">
+            <div>
+                <label for="type-filter">Typ:</label>
+                <select id="type-filter">
+                    <option value="">Maschine</option> 
+                    <option value="">Gerät</option> 
+                    <option value="">Schrank</option> 
+                </select>
+            </div>
+            <div>
+                <label for="model-filter">Modell:</label>
+                <select id="model-filter">
+                    <option value="">Maschine</option> 
+                    <option value="">Gerät</option> 
+                    <option value="">Schrank</option> 
+                </select>
+            </div>
+            <div>
+                <label for="buildyear-filter">Baujahr:</label>
+                <select id="buildyear-filter">
+                    <option value="">2023</option> 
+                    <option value="">2024</option> 
+                    <option value="">2025</option> 
+                </select>
+            </div>
+            <div>
+                <!--This string is searching through all the other fields-->
+                <label for="search-filter">Suchbegriff: </label>
+                <input type="text" id="search-filter">
+            </div>
+            <div id="btn-product-container">
+                <button id="btn-new-product">Neues Produkt</button>
+                <button id="btn-save-product">Speichern</button>
+            </div>
+        </div>
+    </section>
+    <!--In this section all models of the selectd type are shown. One dataset is selectable-->
+    <section id="product-container">
+        <section id="item-product-container">
+            <item-product></item-product>
+            <item-product></item-product>
+            <item-product></item-product>
+            <item-product></item-product>
+            <item-product></item-product>
+            <item-product></item-product>
+        </section>
+    </section>
+</div>

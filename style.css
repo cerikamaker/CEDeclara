@@ -137,27 +137,29 @@ aside > nav .sidebar-btn {
     margin-right: var(--std-marging-right);
     margin-top: var(--std-margin-top);
     padding: var(--std-padding);
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     min-width: 0;
     min-height: 0;
-    overflow: auto;
 }
 
-#app-area::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 10px;
     background: transparent;
 }
 
-#app-area::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: var(--dodger-blue);
+    cursor: grabbing;
     border-radius: 2px;
 }
 
-#app-area::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
     background: var(--dodger-blue);
 }
 
-#app-area::-webkit-scrollbar-corner {
+*::-webkit-scrollbar-corner {
     background: #222;
 }
 
@@ -171,12 +173,27 @@ footer {
 
 /* General tag definitions*/
 input[type="text"] {
-    background-color: #101010;
+    background-color: var(--backgroundcolor);
     border-width: 0;
     color: var(--textcolor);
     font-size: 1em;
     padding: 5px;
     border-radius: 8px;
+}
+
+textarea {
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    font-size: 1em;
+}
+
+select {
+    background-color: var(--backgroundcolor);
+    font-size: 1em;
+    color: var(--textcolor);
+    padding: 5px;
+    border-radius: var(--radius);
+    border-width: 0px;
 }
 
 /* Class deiniftions */

@@ -136,7 +136,7 @@ class SiteNavigator extends HTMLElement {
                             <li>Bevollmächtigte</li>
                             <li>Unterzeichnungsberechtigte</li>
                             <li>Dokumentationsbevollmächtigte</li>
-                            <li>Produkte</li>
+                            <li data-view="BaseProducts">Produkte</li>
                             <li>Benannte Stellen</li>
                         </ul>
                     </li>

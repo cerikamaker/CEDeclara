@@ -1,5 +1,6 @@
 import { DatenquelleView } from "../html/datenquelle_view.js";
 import { ProductIdentView } from "../html/productident_view.js";
+import { BaseProductView } from "../html/base_product_view.js";
 import { Declara } from "./pkg/sn_viewmodel_cedeclara.js";
 /**
  * @description
@@ -11,7 +12,8 @@ export class ContentLoader {
         Intro: './html/introduction.html',
         Datenquelle: './html/datenquelle.html',
         Datenschutz: './html/datenschutz.html',
-        Produktidentifikation: './html/productident.html'
+        Produktidentifikation: './html/productident.html',
+        BaseProducts: './html/base_product.html'
     };
 
     /**
@@ -22,6 +24,7 @@ export class ContentLoader {
         this.declara = declara;
         this.datenquelle = new DatenquelleView();
         this.productident = new ProductIdentView(this.declara);
+        this.baseproduct = new BaseProductView(this.declara);
     }
 
     /**
@@ -55,6 +58,9 @@ export class ContentLoader {
                 break;
             case 'Produktidentifikation':
                 this.productident.InitView();
+                break;
+            case 'BaseProducts':
+                this.baseproduct.InitView();
                 break;
             default:
         }
